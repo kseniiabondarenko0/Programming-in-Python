@@ -1,7 +1,7 @@
-"""Returns a list of numbers from the input list that are divisible by the given divisor
+"""Returns x list of numbers from the input list that are divisible by the given divisor
 
 Do:
-Check if the divisor is zero, if the first argument is a list, and if the second argument is an integer
+Check if the divisor is zero, if the first argument is x list, and if the second argument is an integer
 
 Returns:
     list: A list of integers from the input list that are divisible by the given divisor
@@ -13,38 +13,45 @@ def divisible(numbers, divisor):
 
 
     if divisor == 0:
-        raise ValueError( "Error: Divisor cannot be zero.")
+        raise ValueError("Divisor cannot be zero.")
     if type(numbers) != list:
-        raise TypeError("Error: First argument must be a list.")
+        raise TypeError("First argument must be a list.")
     if type(divisor) != int:
-        raise TypeError("Error: Second argument must be an integer.")
-
+        raise TypeError("Second argument must be an integer.")
 
     result = []
     for n in numbers:
         if type(n) != int:
-            return "Error: List contains non-integer values."
-        if n%divisor == 0:
+            raise TypeError("List contains non-integer values.")
+        if n % divisor == 0:
             result.append(n)
 
     return result
 
 
-
-
 #Exercise 2
 
-def common(a, y):
-    if type(a)!=list or type(y)!=list:
-        return "Error: Invalid input types.Must be lists"
+def common(x, y):
 
-    list_b_copy = list(y)
+
+    ("Return the intersection of multisets x & y\n"
+     "\n"
+     "Do:\n"
+     "Check if the first argument is x list, and if the second argument is a list\n"
+     "\n"
+     "Returns:\n"
+     "    list: A list of integers that are in both x and y\n")
+
+
+    if type(x) != list or type(y) != list:
+        raise TypeError("Invalid input types. Must be lists.")
+
+    list_y_copy = list(y)
     answer = []
 
-    for element in a:
-        if element in list_b_copy:
+    for element in x:
+        if element in list_y_copy:
             answer.append(element)
-            list_b_copy.remove(element)  # remove only one, so it is not counted twice
+            list_y_copy.remove(element)  # remove only one, so it is not counted twice
     return answer
-
 
