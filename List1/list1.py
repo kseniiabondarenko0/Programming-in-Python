@@ -1,15 +1,16 @@
-"""Returns x list of numbers from the input list that are divisible by the given divisor
 
-Do:
-Check if the divisor is zero, if the first argument is x list, and if the second argument is an integer
-
-Returns:
-    list: A list of integers from the input list that are divisible by the given divisor
-"""
 
 
 #Exercise 1
 def divisible(numbers, divisor):
+    """Returns x list of numbers from the input list that are divisible by the given divisor
+
+    Do:
+    Check if the divisor is zero, if the first argument is x list, and if the second argument is an integer
+
+    Returns:
+        list: A list of integers from the input list that are divisible by the given divisor
+    """
 
 
     if divisor == 0:
@@ -30,17 +31,13 @@ def divisible(numbers, divisor):
 
 
 #Exercise 2
-
 def common(x, y):
 
 
-    ("Return the intersection of multisets x & y\n"
-     "\n"
-     "Do:\n"
-     "Check if the first argument is x list, and if the second argument is a list\n"
-     "\n"
-     "Returns:\n"
-     "    list: A list of integers that are in both x and y\n")
+    """Return the intersection of multisets x & y
+     Do: Check if the first argument is an x list, and if the second argument is a list
+     Returns:
+    list: A list of integers that are in both x and y"""
 
 
     if type(x) != list or type(y) != list:
