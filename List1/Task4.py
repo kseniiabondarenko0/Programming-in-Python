@@ -6,6 +6,22 @@ import matplotlib.pyplot as plt
 
 
 def random_walk(n):
+    """A very lost walker leaves (0, 0) and stumbles one step at a time until he is more than n units from home
+
+    Args:
+        n (int): Distance from the centre at which the walker gives up. Must be > 0
+
+    Returns:
+        list: Positions as (x, y) tuples after each step; the last one is farther than n from (0, 0)
+
+    Raises:
+        TypeError: If n is not an int.
+        ValueError: If n <= 0.
+
+    Precondition: n is a positive integer
+    Postcondition: Every step moves exactly 1 unit (left, right, up or down)
+    and only the last point lies outside the circle of radius n
+    """
 
     if type(n) != int:
         raise TypeError("n must be an integer.")
